@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import {DatosService} from '../datos.service';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -15,7 +16,8 @@ export class PasaDatosComponent implements OnInit {
 
   constructor(
     private datosService: DatosService,
-    private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private router:Router) {
 
       this.checkoutForm = this.formBuilder.group({
       name: '',
@@ -34,6 +36,7 @@ export class PasaDatosComponent implements OnInit {
     //this.checkoutForm.reset();
 
     console.warn('Your order has been submitted', customerData);
+    this.router.navigate(['presentacion']);
   }
 
 }
