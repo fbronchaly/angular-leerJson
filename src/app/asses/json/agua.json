@@ -11,5 +11,7 @@
              {"id": "el Administrador"},
                {"id": "la Administradora"},
                {"id": "el Inquilino"},
-               {"id": "la Inquilina"}
+               {"id": "la Inquilina"},
+               {"motivo": "por rotura"},
+                {"motivo": "por atasco"}
    ]

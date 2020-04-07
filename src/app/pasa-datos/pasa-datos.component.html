@@ -40,6 +40,35 @@
   </div>
   </div>
 
+  <div class="jumbotron" >
+<div class="row" >
+
+<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+
+  <select class="custom-select" formControlName="cityName">
+   <option value="" disabled>Motivo de la fuga</option>
+   <option *ngFor="let dato of datos" >{{dato.motivo}}</option>
+</select>
+</div>
+
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  </div>
+  </div>
+
  <button class="button" type="submit">Purchase</button>
    
 
