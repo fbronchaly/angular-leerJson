@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AguaComponent } from './agua/agua.component';
 import { ElectricosComponent } from './electricos/electricos.component';
+import { HomeComponent } from './home/home.component';
+import { CristalComponent } from './cristal/cristal.component';
+import { DatosService } from './datos.service';
 
 
 
@@ -15,7 +18,8 @@ import { ElectricosComponent } from './electricos/electricos.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule],
-  declarations: [ AppComponent, HelloComponent, AguaComponent, ElectricosComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, HelloComponent, AguaComponent, ElectricosComponent, HomeComponent, CristalComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [DatosService]
 })
 export class AppModule { }
