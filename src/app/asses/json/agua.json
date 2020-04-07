@@ -1,12 +1,15 @@
 
-
 [
-{ "garantia": "conduccion general",
-  "zona": "comunitaria"
-},
-{ "garantia": "conduccion bajante",
-  "zona": "privativa"
-}
-
-
-]
+     {"id":" la Asegurada" },
+     {"id": "el Asegurado"},
+      {"id": "la Esposa del Asegurado"},
+       {"id": "el Esposo de la Asegurada"},
+     {"id": "el Gerente de la empresa asegurada"},
+       {"id": "la Gerente de la empresa asegurada"},
+         {"id": "el Encargado"},
+           {"id": "la Encargada"},
+             {"id": "el Administrador"},
+               {"id": "la Administradora"},
+               {"id": "el Inquilino"},
+               {"id": "la Inquilina"}
+   ]

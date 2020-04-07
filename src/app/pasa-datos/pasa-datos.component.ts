@@ -12,6 +12,8 @@ import {Router} from "@angular/router";
 export class PasaDatosComponent implements OnInit {
 
   datos:any[]=[];
+  
+
   checkoutForm;
 
   constructor(

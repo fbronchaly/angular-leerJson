@@ -9,8 +9,8 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of datos">
-  <span>{{ item.garantia }} </span>
-  <span>{{ item.zona }}</span>
+  <span>{{ item.id }} </span>
+  
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
