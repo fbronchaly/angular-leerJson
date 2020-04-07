@@ -45,26 +45,19 @@
 
 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
 
-  <select class="custom-select" formControlName="cityName">
+  <select class="custom-select" formControlName="motivo">
    <option value="" disabled>Motivo de la fuga</option>
-   <option *ngFor="let dato of datos" >{{dato.motivo}}</option>
+   <option *ngFor="let dato of motivos" >{{dato.motivo}}</option>
 </select>
 </div>
 
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
-  </div>
+<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 
-
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
-  </div>
+  <select class="custom-select" formControlName="conduccion">
+   <option value="" disabled>Tipo de conducción</option>
+   <option *ngFor="let dato of conduccions" >{{dato.conduccion}}</option>
+</select>
+</div>
 
   </div>
   </div>

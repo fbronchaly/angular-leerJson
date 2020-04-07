@@ -12,6 +12,15 @@ import {Router} from "@angular/router";
 export class PasaDatosComponent implements OnInit {
 
   datos:any[]=[];
+
+  motivos: any[]=[
+    {motivo:"por rotura"},
+    {motivo:"por desbordamiento, debido a atasco"}
+  ];
+   conduccions: any[]=[
+    {conduccion:"en conducción general"},
+    {conduccion:"en conducción bajante"}
+  ];
   
 
   checkoutForm;
@@ -31,6 +40,7 @@ export class PasaDatosComponent implements OnInit {
 
   ngOnInit() {
    this.datos = this.datosService.getDatos();
+   this.motivos = this.motivos;
   }
 
   onSubmit(customerData) {
