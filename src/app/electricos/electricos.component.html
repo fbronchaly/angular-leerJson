@@ -6,14 +6,14 @@
  <br>
 
  <form #f="ngForm">
-      <select name="state" ng-model="val" >
+      <select name="state" ng-model="val">
         <option value="" disabled>Choose a state</option>
         <option *ngFor="let state of states" [ngValue]="state">
           {{ state.abbrev }}
         </option>
       </select>
 
-      <a>{{val}}Hola</a>
+     
     </form>
     
   

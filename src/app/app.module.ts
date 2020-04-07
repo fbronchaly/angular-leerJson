@@ -11,6 +11,7 @@ import { ElectricosComponent } from './electricos/electricos.component';
 import { HomeComponent } from './home/home.component';
 import { CristalComponent } from './cristal/cristal.component';
 import { DatosService } from './datos.service';
+import { PasaDatosComponent } from './pasa-datos/pasa-datos.component';
 
 
 
@@ -18,7 +19,7 @@ import { DatosService } from './datos.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule],
-  declarations: [ AppComponent, HelloComponent, AguaComponent, ElectricosComponent, HomeComponent, CristalComponent ],
+  declarations: [ AppComponent, HelloComponent, AguaComponent, ElectricosComponent, HomeComponent, CristalComponent, PasaDatosComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DatosService]
 })
