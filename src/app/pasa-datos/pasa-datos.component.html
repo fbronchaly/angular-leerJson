@@ -5,13 +5,14 @@
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<div class="row">
+
   <div class="container-fluid">
    
     
 <form class="form-inline justify-content-right"[formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
-
+<div class="jumbotron" >
+<div class="row" >
 
 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
 
@@ -36,7 +37,8 @@
     <input id="address" type="text" formControlName="address">
   </div>
 
-  
+  </div>
+  </div>
 
  <button class="button" type="submit">Purchase</button>
    
@@ -44,6 +46,7 @@
 
 </form>
 
-<div>
-    <div>
+</div>
+
+    
   
