@@ -23,7 +23,8 @@ export class PasaDatosComponent implements OnInit {
 
       this.checkoutForm = this.formBuilder.group({
       name: '',
-      address: ''
+      address: '',
+      cityName:''
     });
 
     }
