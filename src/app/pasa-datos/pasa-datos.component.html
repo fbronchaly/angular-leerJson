@@ -1,38 +1,49 @@
-<h3>Cart</h3>
-<nav>
-  <a routerLink="/presentacion" routerLinkActive="active">Crisis Center</a>
+<h3>Agua</h3>
 
-</nav>
 
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<div class="cart-item" *ngFor="let item of datos">
-  <span>{{ item.id }} </span>
-  
-</div>
+<div class="row">
+  <div class="container-fluid">
+   
+    
+<form class="form-inline justify-content-right"[formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+
+<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+
   <select class="custom-select" formControlName="cityName">
-   <option value="" disabled>Choose your city</option>
+   <option value="" disabled>Quien atiende</option>
    <option *ngFor="let dato of datos" >{{dato.id}}</option>
 </select>
+</div>
 
-  <div>
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
     <label for="name">
       Name
     </label>
     <input id="name" type="text" formControlName="name">
   </div>
 
-  <div>
+
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
     <label for="address">
       Address
     </label>
     <input id="address" type="text" formControlName="address">
   </div>
 
-  <button class="button" type="submit">Purchase</button>
+  
+
+ <button class="button" type="submit">Purchase</button>
+   
+
 
 </form>
+
+<div>
+    <div>
+  
