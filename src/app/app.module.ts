@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   
 
@@ -18,7 +18,7 @@ import { PasaDatosComponent } from './pasa-datos/pasa-datos.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule],
+  imports:      [ BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
   declarations: [ AppComponent, HelloComponent, AguaComponent, ElectricosComponent, HomeComponent, CristalComponent, PasaDatosComponent ],
   bootstrap:    [ AppComponent ],
   providers: [DatosService]

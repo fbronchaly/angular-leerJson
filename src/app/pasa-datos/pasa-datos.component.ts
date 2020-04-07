@@ -11,16 +11,29 @@ import {DatosService} from '../datos.service';
 export class PasaDatosComponent implements OnInit {
 
   datos:any[]=[];
+  checkoutForm;
 
   constructor(
-    datosService: DatosService,
-    formBuilder: FormBuilder) {
+    private datosService: DatosService,
+    private formBuilder: FormBuilder) {
 
-    this.datos = datosService.getDatos();
+      this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
 
-   }
+    }
 
   ngOnInit() {
+   this.datos = this.datosService.getDatos();
+  }
+
+  onSubmit(customerData) {
+    // Process checkout data here
+    //this.datos = this.datosService.clearDatos();
+    //this.checkoutForm.reset();
+
+    console.warn('Your order has been submitted', customerData);
   }
 
 }
