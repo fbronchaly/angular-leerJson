@@ -33,14 +33,19 @@ export class PasaDatosComponent implements OnInit {
       this.checkoutForm = this.formBuilder.group({
       name: '',
       address: '',
-      cityName:''
+      conduccion:'',
+      motivo:'',
+      atiende:'',
+      anadeTexto:''
+
     });
 
     }
 
   ngOnInit() {
    this.datos = this.datosService.getDatos();
-   this.motivos = this.motivos;
+  this.motivos =this.motivos;
+  this.conduccions = this.conduccions;
   }
 
   onSubmit(customerData) {
