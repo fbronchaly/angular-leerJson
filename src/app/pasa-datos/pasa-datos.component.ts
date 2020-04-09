@@ -54,7 +54,7 @@ export class PasaDatosComponent implements OnInit {
     //this.checkoutForm.reset();
 
     console.warn('Your order has been submitted', customerData);
-    this.router.navigate(['presentacion']);
+    this.router.navigate(['presentacion',customerData]);
   }
 
 }
