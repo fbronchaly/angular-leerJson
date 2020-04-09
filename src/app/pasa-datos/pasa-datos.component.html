@@ -22,9 +22,11 @@
 <div class="row" >
 
 <div class="form-group">
-
+ <label for="name">
+      Quien atiende?
+    </label>
   <select class="custom-select" formControlName="atiende">
-   <option value="" disabled>Quien atiende</option>
+   <option value="" disabled></option>
    <option *ngFor="let dato of datos" >{{dato.id}}</option>
 </select>
 </div>
@@ -51,17 +53,22 @@
 <div class="row" >
 
 <div class="form-group">
+   <label for="name">
+      Motivo de la fuga
+    </label>
 
   <select class="custom-select" formControlName="motivo">
-   <option value="" disabled>Motivo de la fuga</option>
+   <option value="" disabled></option>
    <option *ngFor="let dato of motivos" >{{dato.motivo}}</option>
 </select>
 </div>
 
 <div class="form-group">
-
+ <label for="name">
+      Tipo de conducción
+    </label>
   <select class="custom-select" formControlName="conduccion">
-   <option value="" disabled>Tipo de conducción</option>
+   <option value="" disabled></option>
    <option *ngFor="let dato of conduccions" >{{dato.conduccion}}</option>
 </select>
 </div>
@@ -74,6 +81,7 @@
 
 
   <div class="form-group">
+    
     <label for="anadeTexto">
       Descripción
     </label>
