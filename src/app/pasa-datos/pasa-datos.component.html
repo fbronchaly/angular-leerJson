@@ -8,9 +8,10 @@
 
 
         <!-- Panel Title -->
-        <div class="panel-heading">
-            <h2 class="panel-title text-center">Generali Agua <span class="glyphicon glyphicon-map-marker"></span></h2>
-        </div>
+        
+<ngb-alert class="panel-title text-center"type="success" [dismissible]="false">
+      Agua <span class="glyphicon glyphicon-map-marker"></span>
+    </ngb-alert>
 
   <div class="panel-body">
    
@@ -20,7 +21,7 @@
 <div class="w3-container w3-section w3-padding-8 w3-orange" >
 <div class="row" >
 
-<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+<div class="form-group">
 
   <select class="custom-select" formControlName="atiende">
    <option value="" disabled>Quien atiende</option>
@@ -28,7 +29,7 @@
 </select>
 </div>
 
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+  <div class="form-group">
     <label for="name">
       Name
     </label>
@@ -36,7 +37,7 @@
   </div>
 
 
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+  <div class="form-group">
     <label for="address">
       Address
     </label>
@@ -49,7 +50,7 @@
   <div class="w3-container w3-section w3-padding-8 w3-orange" >
 <div class="row" >
 
-<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+<div class="form-group">
 
   <select class="custom-select" formControlName="motivo">
    <option value="" disabled>Motivo de la fuga</option>
@@ -57,7 +58,7 @@
 </select>
 </div>
 
-<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+<div class="form-group">
 
   <select class="custom-select" formControlName="conduccion">
    <option value="" disabled>Tipo de conducción</option>
@@ -72,7 +73,7 @@
 <div class="row" >
 
 
-  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+  <div class="form-group">
     <label for="anadeTexto">
       Descripción
     </label>
