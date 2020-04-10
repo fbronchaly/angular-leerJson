@@ -8,19 +8,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PresentacionComponent implements OnInit {
 
-
+parametros:any = {};
 
   constructor(private route: ActivatedRoute) {
    route.params.subscribe(params => {
-     // const course = params;
-       this.heroe = this._heroesService.getHeroe( params['id'] );
-       
-     console.log (course.name);
+     this.parametros = params;
+       //this.parametros = this._heroesService.getHeroe( params['id'] );
+       return this.parametros;
+     //console.log (course.name);
     });
   }
 
   ngOnInit() {
   }
+ 
 
 
 
