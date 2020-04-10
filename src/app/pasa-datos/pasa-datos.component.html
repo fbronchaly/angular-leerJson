@@ -19,7 +19,15 @@
 <form class="form-inline justify-content-right"[formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
 <div class="w3-container w3-section w3-padding-8 w3-orange" >
-<div class="row" >
+   <div class="form-group">
+    <label for="vivAfectadas">
+      Nº Expediente
+    </label>
+    <input id="expedientes" type="text" formControlName="expedientes">
+  </div>
+</div>
+
+<div class="w3-container w3-section w3-padding-8 w3-orange" >
 
 <div class="form-group">
  <label for="name">
@@ -30,8 +38,6 @@
    <option *ngFor="let dato of datos" >{{dato.id}}</option>
 </select>
 </div>
-
-
   <div class="form-group">
     <label for="vivAfectadas">
       Viviendas afectadas
@@ -41,7 +47,7 @@
 
   <div class="form-group">
    <label for="name">
-      Elementos afectados
+      Construcción afectada
     </label>
 
   <select class="custom-select" formControlName="eleAfectados">
@@ -51,10 +57,9 @@
 </div>
 
   </div>
-  </div>
+
 
   <div class="w3-container w3-section w3-padding-8 w3-orange" >
-<div class="row" >
 
 <div class="form-group">
    <label for="name">
@@ -77,12 +82,20 @@
 </select>
 </div>
 
+<div class="form-group">
+ <label for="name">
+     Estancia afectada
+    </label>
+  <select class="custom-select" formControlName="zonaAfectada">
+   <option value="" disabled></option>
+   <option *ngFor="let dato of zonasAfectada" >{{dato.zonaAfectada}}</option>
+</select>
+</div>
+
   </div>
-  </div>
+  
 
 <div class="w3-container w3-section w3-padding-8 w3-orange" >
-<div class="row" >
-
 
   <div class="form-group">
     
@@ -91,10 +104,12 @@
     </label>
     <textarea id="anadeTexto" type="text" formControlName="anadeTexto" rows="4" cols="100" wrap="hard"></textarea>
   </div>
+  </div>
 
 
-  </div>
-  </div>
+
+
+  
 
   
 

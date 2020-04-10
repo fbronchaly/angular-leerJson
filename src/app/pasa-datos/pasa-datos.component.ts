@@ -23,13 +23,22 @@ export class PasaDatosComponent implements OnInit {
   ];
 
    eleAfectados: any[]=[
-    {elemAfec:"techo"},
-    {elemAfec:"techos"},
-    {elemAfec:"paramento"},
-    {elemAfec:"paramentos"},
-    {elemAfec:"techo y paramento"},
-    {elemAfec:"techo y paramentos"}
+    {elemAfec:"al techo"},
+    {elemAfec:"a los techos"},
+    {elemAfec:"al paramento"},
+    {elemAfec:"los paramentos"},
+    {elemAfec:"al techo y paramento"},
+    {elemAfec:"al techo y paramentos"}
   ];
+
+  zonasAfectada: any[]=[
+
+    {zonaAfectada:"del salón."},
+    {zonaAfectada:"del pasillo."},
+    {zonaAfectada:"del aseo."},
+    {zonaAfectada:"del cuarto de baño."},
+    {zonaAfectada:"de la cocina."}
+  ]
 
 
   
@@ -48,7 +57,9 @@ export class PasaDatosComponent implements OnInit {
       motivo:'',
       atiende:'',
       anadeTexto:'',
-      eleAfectados:''
+      eleAfectados:'',
+      expedientes:'',
+      zonaAfectada:''
 
     });
 
