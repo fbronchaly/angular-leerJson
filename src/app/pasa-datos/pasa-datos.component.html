@@ -31,20 +31,24 @@
 </select>
 </div>
 
-  <div class="form-group">
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
-  </div>
-
 
   <div class="form-group">
-    <label for="address">
-      Address
+    <label for="vivAfectadas">
+      Viviendas afectadas
     </label>
-    <input id="address" type="text" formControlName="address">
+    <input id="vivAfectadas" type="text" formControlName="vivAfectadas">
   </div>
+
+  <div class="form-group">
+   <label for="name">
+      Elementos afectados
+    </label>
+
+  <select class="custom-select" formControlName="eleAfectados">
+   <option value="" disabled></option>
+   <option *ngFor="let dato of eleAfectados" >{{dato.elemAfec}}</option>
+</select>
+</div>
 
   </div>
   </div>

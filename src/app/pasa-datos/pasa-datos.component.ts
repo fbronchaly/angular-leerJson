@@ -21,6 +21,15 @@ export class PasaDatosComponent implements OnInit {
     {conduccion:"en conducción general"},
     {conduccion:"en conducción bajante"}
   ];
+
+   eleAfectados: any[]=[
+    {elemAfec:"techo"},
+    {elemAfec:"techos"},
+    {elemAfec:"paramento"},
+    {elemAfec:"paramentos"},
+    {elemAfec:"techo y paramento"},
+    {elemAfec:"techo y paramentos"}
+  ];
   
 
   checkoutForm;
@@ -31,12 +40,13 @@ export class PasaDatosComponent implements OnInit {
     private router:Router) {
 
       this.checkoutForm = this.formBuilder.group({
-      name: '',
-      address: '',
+
+      vivAfectadas: '',
       conduccion:'',
       motivo:'',
       atiende:'',
-      anadeTexto:''
+      anadeTexto:'',
+      eleAfectados:''
 
     });
 

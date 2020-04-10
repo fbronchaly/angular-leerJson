@@ -13,7 +13,6 @@ parametros:any = {};
   constructor(private route: ActivatedRoute) {
    route.params.subscribe(params => {
      this.parametros = params;
-       //this.parametros = this._heroesService.getHeroe( params['id'] );
        return this.parametros;
      //console.log (course.name);
     });
