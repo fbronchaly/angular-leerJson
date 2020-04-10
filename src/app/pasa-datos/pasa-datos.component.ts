@@ -30,6 +30,8 @@ export class PasaDatosComponent implements OnInit {
     {elemAfec:"techo y paramento"},
     {elemAfec:"techo y paramentos"}
   ];
+
+
   
 
   checkoutForm;
