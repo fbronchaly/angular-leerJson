@@ -18,18 +18,26 @@
             
             <p class="bg-muted">Personado en el riesgo asegurado, se trata de edificio de viviendas en regimen de propiedad horizontal, en zona urbana con buen estado de conservación, con los capitales contratados acordes a las preexistencias observadas, donde soy atendido por {{parametros.atiende}}, que nos informa de la ocurrencia del siniestro. </p>
          
-           
+             <p class="bg-muted"> En nuestra inspección comprobamos daños en vivienda {{parametros.vivAfectadas}}, afectando a la pintura {{parametros.eleAfectados}} {{parametros.zonaAfectada}}, producidos por fuga de agua, {{parametros.motivo}} {{parametros.conduccion}}. </p>
+              
+            <p class="bg-muted">
+            {{parametros.anadeTexto}}
+            </p>
+
 
               <div><br></div>
 
                   <p class="">CAUSAS</p>
   <div><br></div>
-              <p class="bg-muted">Por fuga de agua se producen daños {{parametros.eleAfectados}} {{parametros.zonaAfectada}} en vivienda {{parametros.vivAfectadas}} </p>
-              <p class="bg-muted"> </p>
+              <p class="bg-muted">Por fuga de agua {{parametros.conduccion}}, se producen daños {{parametros.eleAfectados}} {{parametros.zonaAfectada}} en vivienda {{parametros.vivAfectadas}}. </p>
+             
 
 
   <div><br></div>
-
+                 <p class="">CONCLUSIÓN</p>
+                 <p class="bg-muted">
+                   {{parametros.cobertura}}
+                 </p>
 
     <nav>
   <a routerLink="/electricos" routerLinkActive="active">Volver</a>

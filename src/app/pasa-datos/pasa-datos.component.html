@@ -96,17 +96,43 @@
   
 
 <div class="w3-container w3-section w3-padding-8 w3-orange" >
-
-  <div class="form-group">
-    
+   
 <div class="form-group">
       <label>Datos anexos</label>
       <textarea class="form-control" rows="3" formControlName="anadeTexto" ></textarea>
     </div>
 
   </div>
-  </div>
+ 
+ <div class="w3-container w3-section w3-padding-8 w3-orange" >
 
+<div class="form-group">
+   <label for="qrepar">
+      Quien repara?
+    </label>
+
+  <select class="custom-select" formControlName="qrepara">
+   <option value="" disabled></option>
+   <option *ngFor="let dato of qreparas" >{{dato.qrepara}}</option>
+</select>
+</div>
+<div class="form-group">
+<div class="custom-control custom-radio">
+							<input id="cobertura" type="radio" class="custom-control-input" value="cobertura" name="cobertura" formControlName="cobertura">
+              <label class="custom-control-label" for="cobertura">Cubierto</label>
+            </div>
+
+</div>
+
+ <label for="cobertura">
+      Aplicar RC
+    </label>
+<div class="form-group">
+<input type="checkbox" formControlName="rc" ng-init="rc = false"> 
+</div>
+
+
+  </div>
 
 
 

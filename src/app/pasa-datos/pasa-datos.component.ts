@@ -14,7 +14,7 @@ export class PasaDatosComponent implements OnInit {
   datos:any[]=[];
 
   motivos: any[]=[
-    {motivo:"por rotura"},
+    {motivo:"debido a rotura"},
     {motivo:"por desbordamiento, debido a atasco"}
   ];
    conduccions: any[]=[
@@ -24,7 +24,7 @@ export class PasaDatosComponent implements OnInit {
 
    eleAfectados: any[]=[
     {elemAfec:"al techo"},
-    {elemAfec:"a los techos"},
+    {elemAfec:"en los techos"},
     {elemAfec:"al paramento"},
     {elemAfec:"los paramentos"},
     {elemAfec:"al techo y paramento"},
@@ -33,15 +33,48 @@ export class PasaDatosComponent implements OnInit {
 
   zonasAfectada: any[]=[
 
-    {zonaAfectada:"del salón."},
-    {zonaAfectada:"del pasillo."},
-    {zonaAfectada:"del aseo."},
-    {zonaAfectada:"del cuarto de baño."},
-    {zonaAfectada:"de la cocina."}
+    {zonaAfectada:"del salón"},
+    {zonaAfectada:"del pasillo"},
+    {zonaAfectada:"del aseo"},
+    {zonaAfectada:"del cuarto de baño"},
+    {zonaAfectada:"de la cocina"}
   ]
 
+coberturas: any[]=[
 
+    {cobertura:"amparado"},
+    {cobertura:"NO amparado"}
+    
+  ];
+
+  qreparas: any[]=[
+
+    {qrepara:"Asegurado"},
+    {qrepara:"Asegurada"},
+    {qrepara:"Servicio de asistencia"},
+    {qrepara:"Perjudicado"},
+    {qrepara:"Perjudicada"},
+    
+  ]
+  continentes: any[]=[
+
+    {continente:"continente"},
+    {continente:"contenido"},
+    {continente:"continente y contenido"}
+   
+    
+  ];
+  cubierto: boolean;
+  cobertura = "";
+
+
+  fraseConclusionAmparado =
+     "Por tanto, a criterio de este perito los daños se consideran amparados por la garantía de daños por agua contratada en póliza que afecta al continente asegurado." ;
+
+fraseConclusionNamparado =
+    "Por tanto, a criterio de este perito los daños NO se consideran amparados por las garantías de esta póliza, al";
   
+
 
   checkoutForm;
 
@@ -59,7 +92,12 @@ export class PasaDatosComponent implements OnInit {
       anadeTexto:'',
       eleAfectados:'',
       expedientes:'',
-      zonaAfectada:''
+      zonaAfectada:'',
+      cobertura:'',
+      rc:'',
+      qrepara:'',
+      continente:''
+      
 
     });
 
@@ -75,6 +113,11 @@ export class PasaDatosComponent implements OnInit {
     // Process checkout data here
     //this.datos = this.datosService.clearDatos();
     //this.checkoutForm.reset();
+    if ( this.cubierto = true ){
+      this.cobertura = this.fraseConclusionAmparado;
+    }else {
+      this.cobertura = this.fraseConclusionNamparado;
+    }
 
     console.warn('Your order has been submitted', customerData);
     this.router.navigate(['presentacion',customerData]);
