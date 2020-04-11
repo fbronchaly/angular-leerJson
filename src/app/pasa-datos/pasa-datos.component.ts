@@ -118,12 +118,12 @@ fraseConclusionNamparado =
     // Process checkout data here
     //this.datos = this.datosService.clearDatos();
     //this.checkoutForm.reset();
-   let cobert = this.checkoutForm.cubierto;
+   let cobert = customerData.cubierto;
    console.log (cobert);
-    if ( cobert = true ){
-      this.cobertura = this.fraseConclusionAmparado;
+    if ( cobert == true ){
+      customerData.cobertura= this.fraseConclusionAmparado;
     }else {
-      this.cobertura = this.fraseConclusionNamparado;
+      customerData.cobertura = this.fraseConclusionNamparado;
     }
 
     console.warn('Your order has been submitted', customerData);
