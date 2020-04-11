@@ -97,8 +97,8 @@ fraseConclusionNamparado =
       rc:'',
       qrepara:'',
       continente:'',
-      cubierto: ['cubierto', [Validators.required]]
-      
+      cobertura:'',
+      cubierto:''
 
     });
 
@@ -118,7 +118,8 @@ fraseConclusionNamparado =
     // Process checkout data here
     //this.datos = this.datosService.clearDatos();
     //this.checkoutForm.reset();
-   let cobert = customerData.cubierto;
+   let cobert = this.checkoutForm.cubierto;
+   console.log (cobert);
     if ( cobert = true ){
       this.cobertura = this.fraseConclusionAmparado;
     }else {
