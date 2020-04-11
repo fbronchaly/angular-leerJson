@@ -140,7 +140,7 @@ fraseNoFranquicia = "No existe franquicia";
     // Condicional para enviar frase RC a conclusiones.
     let franqui = customerData.franquicia;
     if ( franqui > 0  ){
-      customerData.franquicia= this.fraseFranquicia + franqui +' '+ "€" ;
+      customerData.franquicia= this.fraseFranquicia +' '+ franqui +' '+ "€" ;
     } else {
       customerData.franquicia= this.fraseNoFranquicia;
     }

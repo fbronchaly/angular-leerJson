@@ -79,3 +79,10 @@ padding: 10px;
 width: 55%;
 }
 
+.panel-body {
+  font-family: Arial;
+  margin-left: 3em;
+  margin-right: 3em;
+    line-height: 15px;
+    font-size: 100%;
+}
