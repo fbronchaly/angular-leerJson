@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder,Validators } from '@angular/forms';
 import {DatosService} from '../datos.service';
 import {Router} from "@angular/router";
 
@@ -12,6 +12,7 @@ import {Router} from "@angular/router";
 export class PasaDatosComponent implements OnInit {
 
   datos:any[]=[];
+  cubierto: boolean;
 
   motivos: any[]=[
     {motivo:"debido a rotura"},
@@ -64,7 +65,7 @@ coberturas: any[]=[
    
     
   ];
-  cubierto: boolean;
+  
   cobertura = "";
 
 
@@ -93,15 +94,19 @@ fraseConclusionNamparado =
       eleAfectados:'',
       expedientes:'',
       zonaAfectada:'',
-      cobertura:'',
       rc:'',
       qrepara:'',
-      continente:''
+      continente:'',
+      cubierto: ['cubierto', [Validators.required]]
       
 
     });
 
     }
+
+
+
+
 
   ngOnInit() {
    this.datos = this.datosService.getDatos();
@@ -113,7 +118,8 @@ fraseConclusionNamparado =
     // Process checkout data here
     //this.datos = this.datosService.clearDatos();
     //this.checkoutForm.reset();
-    if ( this.cubierto = true ){
+   let cobert = customerData.cubierto;
+    if ( cobert = true ){
       this.cobertura = this.fraseConclusionAmparado;
     }else {
       this.cobertura = this.fraseConclusionNamparado;

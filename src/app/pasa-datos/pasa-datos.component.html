@@ -116,14 +116,18 @@
    <option *ngFor="let dato of qreparas" >{{dato.qrepara}}</option>
 </select>
 </div>
+
+
+
 <div class="form-group">
-<div class="custom-control custom-radio">
-							<input id="cobertura" type="radio" class="custom-control-input" value="cobertura" name="cobertura" formControlName="cobertura">
-              <label class="custom-control-label" for="cobertura">Cubierto</label>
+              <label class="custom-control-label" >Cubierto</label>
+							<input  type="radio"  formControlName="cubierto">
+            
             </div>
 
 </div>
 
+<div class="form-group">
  <label for="cobertura">
       Aplicar RC
     </label>
