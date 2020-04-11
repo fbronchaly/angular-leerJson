@@ -74,7 +74,11 @@ coberturas: any[]=[
 
 fraseConclusionNamparado =
     "Por tanto, a criterio de este perito los daños NO se consideran amparados por las garantías de esta póliza, al";
-  
+
+fraseConclusionRC = "Entendemos que los daños a terceros quedan amparados por la garantía de responsabilidad civil, contratada en póliza";
+
+fraseFranquicia = "Existe franquicia por valor de";
+fraseNoFranquicia = "No existe franquicia";
 
 
   checkoutForm;
@@ -98,7 +102,8 @@ fraseConclusionNamparado =
       qrepara:'',
       continente:'',
       cobertura:'',
-      cubierto:''
+      cubierto:'',
+      franquicia:''
 
     });
 
@@ -118,12 +123,26 @@ fraseConclusionNamparado =
     // Process checkout data here
     //this.datos = this.datosService.clearDatos();
     //this.checkoutForm.reset();
+    // Condicional para enviar tipo de cobertura a conclusiones.
    let cobert = customerData.cubierto;
-   console.log (cobert);
-    if ( cobert == true ){
+   console.log(cobert);
+    if ( cobert === 'true' ){
       customerData.cobertura= this.fraseConclusionAmparado;
     }else {
       customerData.cobertura = this.fraseConclusionNamparado;
+    }
+// Condicional para enviar frase RC a conclusiones.
+    let rcs = customerData.rc;
+    if ( rcs == 'true' ){
+      customerData.rc= this.fraseConclusionRC;
+    }
+
+    // Condicional para enviar frase RC a conclusiones.
+    let franqui = customerData.franquicia;
+    if ( franqui > 0  ){
+      customerData.franquicia= this.fraseFranquicia + franqui +' '+ "€" ;
+    } else {
+      customerData.franquicia= this.fraseNoFranquicia;
     }
 
     console.warn('Your order has been submitted', customerData);

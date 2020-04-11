@@ -121,30 +121,23 @@
 
 <div class="form-group">
             
-			<input type="radio" name="cubierto" value="male" formControlName="cubierto" checked>Cubierto<br>
+			<input type="radio" name="cubierto" value="true" formControlName="cubierto" checked>Cubierto<br>
             
             </div>
 
+<div class="form-group">
+            
+			<input type="radio" name="rc" value="true" formControlName="rc" checked>Aplicar RC<br>
+            
+            </div>
+<div class="form-group">
+            
+			<input type="number" name="franquicia"  formControlName="franquicia" checked>Aplicar RC<br>
+            
+            </div>
 </div>
 
-<div class="form-group">
- <label for="cobertura">
-      Aplicar RC
-    </label>
-<div class="form-group">
-<input type="checkbox" formControlName="rc" ng-init="rc = false"> 
-</div>
-
-
-  </div>
-
-
-
-  
-
-  
-
- <button class="button" type="submit">Purchase</button>
+ <button class="button" type="submit">Enviar</button>
    
 
 
